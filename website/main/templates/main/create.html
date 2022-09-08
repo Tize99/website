@@ -8,6 +8,8 @@
 <h1>Создать новую задачу</h1>
 <form method="post">
     {% csrf_token %}
+    {{ form.title }}
+    {{ form.task }}
     <input type="text" placeholder="Введите название" class="form-control"><br>
     <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
     <button type="submit" class="btn-success">Добавить</button>
