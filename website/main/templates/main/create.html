@@ -7,10 +7,10 @@
 {% block content %}
 <h1>Создать новую задачу</h1>
 <form method="post">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     {% csrf_token %}
     {{ form.title }}<br>
     {{ form.task }}<br>
     <button type="submit" class="btn-success">Добавить</button>
+    <span>{{ error }}</span>
 </form>
 {% endblock %}
